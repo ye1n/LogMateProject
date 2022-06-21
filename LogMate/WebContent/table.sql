@@ -47,13 +47,14 @@ insert into friend values('wooyein3', 'whgmldus', 'Y');
 insert into friend values('dlckddus', 'qkrghdtlr', 'N');
 insert into friend values('qkrghdtlr', 'dlckddus', 'Y');
 
-
 --친구 삭제를 위한 sql
 delete from friend where my_id = 'whgmldus' and friend_id = 'admin';
 --친구 목록을 가져오기 위한 sql
 select * from friend where my_id='whgmldus' and friend_id='admin';
 --친구 검색
 select id from member where id='admin';
+--친구가 추가되어있는지 확인하는 sql
+select my_id, friend_id from friend where my_id='whgmldus' and friend_id='dlehddnjs';
 
 --즐겨찾기에서 친구의 별명을 가져오기 위한 sql
 select my_id, m.nickname, friend_id, favorite from member m, friend f where m.id = f.friend_id order by my_id;
