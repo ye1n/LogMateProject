@@ -19,6 +19,7 @@ public class FriendDAO {
 	final String DELETE_FRIEND = "delete from friend where my_id=? and friend_id=?";
 	final String INSERT_FRIEND = "insert into friend values(?,?,?)";
 	final String UPDATE_FRIEND = "update friend set favorite=? where my_id=? and friend_id=?";
+	final String CONFIRM_FRIEND = "select my_id, friend_id from friend where my_id=? and friend_id=?";
 
 	// 친구 목록
 	public ArrayList<FriendVO> FriendList(String Id) {
@@ -114,7 +115,7 @@ public class FriendDAO {
 		return cnt;
 	}
 
-	// 미완성 친구 추가
+	// 친구 추가
 	public int AddFriend(FriendVO vo) {
 		int cnt = 0;
 
@@ -132,5 +133,28 @@ public class FriendDAO {
 		}
 
 		return cnt;
+	}
+	
+	// 친구 확인
+	public int GetFriend(String mid, String fid) {
+		int result = 1;
+
+		try {
+			con = JdbcUtil.getConnection();
+			pstmt = con.prepareStatement(CONFIRM_FRIEND);
+			pstmt.setString(1, mid);
+			pstmt.setString(2, fid);
+			rs = pstmt.executeQuery();
+
+			if (rs.next()) {
+				result = 1;
+			} else {
+				result = -1;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return result;
 	}
 }
