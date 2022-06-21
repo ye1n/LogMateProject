@@ -22,11 +22,11 @@
 			</tr>
 			<tr>
 				<th>비밀번호</th>
-				<td><input type="password" name="pwd"></td>
+				<td><input type="password" name="pwd" value="<%= vo.getPwd() %>"></td>
 			</tr>
 			<tr>
 				<th>비밀번호 확인</th>
-				<td><input type="password" name="pwdc"></td>
+				<td><input type="password" name="pwdc" value="<%= vo.getPwd() %>"></td>
 			</tr>
 			<tr>
 				<th>별명</th>
@@ -104,11 +104,6 @@
 			</tr>
 		</table>
 	</form>
-	<!--<div>테마<br>
-		<input class="theme" type="button" value="default" onclick="defaultTheme(this)">
-		<input class="theme" type="button" value="dark" onclick="blackTheme(this)">
-		<input class="theme" type="button" value="skyblue" onclick="skyblueTheme(this)">
-	</div>-->
 </section>
 <script type="text/javascript">
 	function check() {
@@ -120,6 +115,11 @@
 		if(document.updateForm.pwd.value==""){
 			alert('비밀번호가 입력되지 않았습니다.')
 			document.updateForm.pwd.focus()
+			return
+		}
+		if(document.updateForm.pwd.value.length < 4){
+			alert('비밀번호를 4자리 이상 입력해주세요.')
+			document.registerForm.pwd.focus()
 			return
 		}
 		if(document.updateForm.pwdc.value==""){
