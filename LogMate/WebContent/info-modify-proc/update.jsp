@@ -37,6 +37,69 @@
 				<td><input type="text" name="intro" value="<%= vo.getIntro() %>"></td>
 			</tr>
 			<tr>
+				<th>테마 변경</th>
+				<td>
+				<%
+					String nowTheme = dao.GetNowThemeColor(Id);
+					if(nowTheme.equals("grey")) {
+				%>
+					<input type="radio" name="theme" value="grey" checked="checked">grey
+					<input type="radio" name="theme" value="pink" >pink
+					<input type="radio" name="theme" value="yellow">yellow
+					<input type="radio" name="theme" value="skyblue">skyblue
+					<input type="radio" name="theme" value="purple">purple
+					<input type="radio" name="theme" value="beige">beige
+				<%
+					} else if(nowTheme.equals("pink")){
+				%>
+					<input type="radio" name="theme" value="grey">grey
+					<input type="radio" name="theme" value="pink" checked="checked">pink
+					<input type="radio" name="theme" value="yellow">yellow
+					<input type="radio" name="theme" value="skyblue">skyblue
+					<input type="radio" name="theme" value="purple">purple
+					<input type="radio" name="theme" value="beige">beige
+				<%
+					} else if(nowTheme.equals("yellow")){
+				%>
+					<input type="radio" name="theme" value="grey">grey
+					<input type="radio" name="theme" value="pink">pink
+					<input type="radio" name="theme" value="yellow" checked="checked">yellow
+					<input type="radio" name="theme" value="skyblue">skyblue
+					<input type="radio" name="theme" value="purple">purple
+					<input type="radio" name="theme" value="beige">beige
+				<%
+					} else if(nowTheme.equals("skyblue")){
+				%>
+					<input type="radio" name="theme" value="grey">grey
+					<input type="radio" name="theme" value="pink">pink
+					<input type="radio" name="theme" value="yellow">yellow
+					<input type="radio" name="theme" value="skyblue" checked="checked">skyblue
+					<input type="radio" name="theme" value="purple">purple
+					<input type="radio" name="theme" value="beige">beige
+				<%
+					} else if(nowTheme.equals("purple")){
+				%>
+					<input type="radio" name="theme" value="grey">grey
+					<input type="radio" name="theme" value="pink">pink
+					<input type="radio" name="theme" value="yellow">yellow
+					<input type="radio" name="theme" value="skyblue">skyblue
+					<input type="radio" name="theme" value="purple" checked="checked">purple
+					<input type="radio" name="theme" value="beige">beige
+				<%
+					} else if(nowTheme.equals("beige")){
+				%>
+					<input type="radio" name="theme" value="grey">grey
+					<input type="radio" name="theme" value="pink">pink
+					<input type="radio" name="theme" value="yellow">yellow
+					<input type="radio" name="theme" value="skyblue">skyblue
+					<input type="radio" name="theme" value="purple">purple
+					<input type="radio" name="theme" value="beige" checked="checked">beige
+				<%
+					}
+				%>
+				</td>
+			</tr>
+			<tr>
 				<td colspan="2"><input type="button" id="btn" value="정보 수정" onclick="check()"></td>
 			</tr>
 		</table>

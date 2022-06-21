@@ -20,6 +20,7 @@ public class LogDAO {
 	final String UPDATE_MEMBER = "update member set name=?, pwd=?, nickname=?, intro=? where id=?";
 	final String SELECT_THEME = "select theme from member";
 
+	// 테마 가져오기
 	public String GetNowThemeColor(String id) {
 		String themeColor = "";
 		try {
@@ -39,6 +40,7 @@ public class LogDAO {
 		return themeColor;
 	}
 
+	// 테마 변경
 	public int UpdateThemeColor(String id, String theme) {
 		int cnt = 0;
 		try {

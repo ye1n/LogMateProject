@@ -1,4 +1,3 @@
-<%@page import="vo.ThemeVO"%>
 <%@page import="vo.MemberVO"%>
 <%@page import="dao.LogDAO"%>
 <%@page import="vo.FriendVO"%>
@@ -87,15 +86,6 @@
 			<a href="<%=request.getContextPath()%>/info-modify-proc/update.jsp?id=<%=id%>">마이페이지</a>
 			<a href="<%=request.getContextPath()%>/friends-proc/friendsList.jsp?id=<%=id%>">친구 목록</a>
 			<a href="<%=request.getContextPath()%>/login-logout-proc/logout.jsp">로그아웃</a>
-<%-- 		<div class="themes">
-				<input class="theme" type="button" value="grey" onclick="<%=lDao.UpdateThemeColor(id, "grey")%>">
-				<input class="theme" type="button" value="pink" onclick="<%=lDao.UpdateThemeColor(id, "pink")%>">
-				<input class="theme" type="button" value="yellow" onclick="<%=lDao.UpdateThemeColor(id, "yellow")%>">
-				<input class="theme" type="button" value="skyblue" onclick="<%=lDao.UpdateThemeColor(id, "skyblue")%>">
-				<input class="theme" type="button" value="purple" onclick="<%=lDao.UpdateThemeColor(id, "purple")%>">
-				<input class="theme" type="button" value="beige" onclick="<%=lDao.UpdateThemeColor(id, "beige")%>">
-			</div>
---%>
 		</div>
 		<span class="material-symbols-outlined" id="close-btn" onclick="exitPop()">close</span>
 	</div>

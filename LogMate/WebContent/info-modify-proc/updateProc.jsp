@@ -6,12 +6,16 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 	LogDAO dao = new LogDAO();
-
+	
 	String name = request.getParameter("name");
 	String Id = request.getParameter("id");
 	String pwd = request.getParameter("pwd");
 	String nickname = request.getParameter("nickname");
 	String intro = request.getParameter("intro");
+	
+	/* 선택한 테마 가져옴 */
+	String theme = request.getParameter("theme");
+	dao.UpdateThemeColor(Id, theme);
 
 	MemberVO vo = new MemberVO(name, Id, pwd, nickname, intro);
 

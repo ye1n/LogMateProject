@@ -6,6 +6,8 @@ public class MemberVO {
 	private String pwd;
 	private String nickname;
 	private String intro;
+//	theme
+	private String theme;
 
 	public MemberVO() {
 
@@ -59,4 +61,14 @@ public class MemberVO {
 	public void setIntro(String intro) {
 		this.intro = intro;
 	}
+
+	// theme
+	public String getTheme() {
+		return theme;
+	}
+
+	public void setTheme(String theme) {
+		this.theme = theme;
+	}
+	
 }
