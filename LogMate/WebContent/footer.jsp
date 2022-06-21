@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 			<!-- 임시 footer 입니다. -->
-			<footer></footer>
+			<footer>footer 수정</footer>
 		</div>
 	</body>
 </html>
