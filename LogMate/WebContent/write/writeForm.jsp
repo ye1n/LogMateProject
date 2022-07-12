@@ -26,12 +26,12 @@
 
 <script type="text/javascript">
 	function check() {
-		if (document.writeForm.title.value = "") {
+		if (document.writeForm.title.value=="") {
 			alert('제목을 입력해주세요');
 			document.writeForm.title.focus();
 			return;
 		}
-		if (document.writeForm.content.value = "") {
+		if (document.writeForm.content.value=="") {
 			alert('내용을 입력해주세요');
 			document.writeForm.content.focus();
 			return;
